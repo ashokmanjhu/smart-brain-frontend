@@ -86,7 +86,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://smartbrainreactappbackend.herokuapp.com/imageurl', {
+      fetch('https://smartbrain-backend-z37p.onrender.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -96,7 +96,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://smartbrainreactappbackend.herokuapp.com/image', {
+          fetch('https://smartbrain-backend-z37p.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
