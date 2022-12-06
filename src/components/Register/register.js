@@ -19,7 +19,7 @@ class Register extends Component {
     this.setState({ password: event.target.value });
   };
   onSubmitSignIn = () => {
-    fetch("https://smartbrainreactappbackend.herokuapp.com/register", {
+    fetch("https://smartbrain-backend-z37p.onrender.com/register", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
